@@ -1,12 +1,9 @@
-
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
-
 
 body, header, section, nav, footer {
     font-family: 'Segoe UI', 'Roboto', sans-serif;
@@ -17,21 +14,18 @@ h1, h2, h3 {
     text-shadow: 0 0 8px rgb(45, 75, 140);
 }
 
-
-/* Body styling */
 body {
-    background: rgb(5, 10, 25); /* your darkest space blue */
-    color: rgb(200, 220, 255); /* subtle light text for readability */
+    background: rgb(5, 10, 25);
+    color: rgb(200, 220, 255);
     line-height: 1.6;
 }
 
-/* Header */
 header {
     text-align: center;
     padding: 2rem;
-    /*background: rgb(15, 35, 70); /* middle space blue */*/
-    color: rgb(220, 230, 255); /* light text */
-    border-bottom: 4px solid rgb(45, 75, 140); /* lightest accent */
+    /*background: rgb(15, 35, 70);*/
+    color: rgb(220, 230, 255); 
+    border-bottom: 4px solid rgb(45, 75, 140);
 }
 
 header h1 {
@@ -44,7 +38,6 @@ header p {
     font-style: italic;
 }
 
-/* Navigation */
 nav {
     background: rgb(15, 35, 70); /* middle space blue */
     padding: 1rem;
@@ -71,7 +64,6 @@ nav ul li a:hover {
     color: rgb(45, 75, 140); /* light accent */
 }
 
-/* Sections */
 section {
     max-width: 900px;
     margin: 2rem auto;
@@ -90,13 +82,11 @@ section h2 {
     text-shadow: 0 0 8px rgb(45, 75, 140);
 }
 
-
-/* About Section Layout */
 .about-content {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap;
 }
 
 .about-img {
@@ -107,8 +97,6 @@ section h2 {
     object-fit: cover;
 }
 
-
-/* Projects */
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -123,7 +111,6 @@ section h2 {
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -134,8 +121,7 @@ section h2 {
     font-weight: bold;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
     padding: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -157,21 +143,18 @@ section h2 {
     background: rgb(70, 100, 180);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background: rgb(15, 35, 70); /* middle blue */
+    background: rgb(15, 35, 70); 
     color: rgb(220, 230, 255);
     margin-top: 2rem;
 }
 
-
-/* Header with Video Background */
 .video-header {
     position: relative;
     width: 100%;
-    height: 260px;                 /* Adjust height as you like */
+    height: 260px;                
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -183,29 +166,26 @@ footer {
     border-bottom: 4px solid rgb(45, 75, 140);
 }
 
-/* Actual video */
 .header-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;             /* Stretches video perfectly */
+    object-fit: cover;
     z-index: -2;
 }
 
-/* Dark overlay for readability */
 .header-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(5, 10, 25, 0.6);  /* Your space theme, semi-transparent */
+    background: rgba(5, 10, 25, 0.6);
     z-index: -1;
 }
 
-/* Text styling stays the same, but ensure it’s visible */
 .video-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.3rem;
