@@ -84,7 +84,8 @@ section h2 {
 
 .about-content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /*align-items: center;*/
     gap: 1.5rem;
     flex-wrap: wrap;
 }
@@ -194,4 +195,143 @@ footer {
 .video-header p {
     font-size: 1.2rem;
     max-width: 700px;
+}
+
+
+
+/* 
+=====================================================
+MEDIA QUERIES – RESPONSIVE OPTIMIZATION 
+Add these at the END of your CSS file
+=====================================================
+*/
+
+/* ----------- SMALL PHONES (max-width: 480px) ----------- */
+@media (max-width: 480px) {
+
+    header h1,
+    .video-header h1 {
+        font-size: 1.8rem; /* Smaller titles */
+    }
+
+    .video-header p {
+        font-size: 1rem; /* Smaller description text */
+        padding: 0 1rem;
+    }
+
+    nav ul li {
+        display: block;         /* Stack nav links vertically */
+        margin: 10px 0;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack About section image & text */
+        text-align: center;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr; /* One card per row */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem; 
+        padding: 0.7rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+}
+
+/* ----------- TABLETS (max-width: 768px) ----------- */
+@media (max-width: 768px) {
+
+    header h1,
+    .video-header h1 {
+        font-size: 2.1rem;
+    }
+
+    .video-header p {
+        font-size: 1.1rem;
+    }
+
+    .about-img {
+        width: 85%;
+    }
+
+    .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    section {
+        margin: 1.5rem;
+    }
+}
+
+/* ----------- SMALL LAPTOPS (max-width: 1024px) ----------- */
+@media (max-width: 1024px) {
+
+    section {
+        max-width: 95%;
+    }
+
+    .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* ----------- LARGE SCREENS / DESKTOPS (min-width: 1400px) ----------- */
+@media (min-width: 1400px) {
+
+    section {
+        max-width: 1200px; /* More breathing room */
+    }
+
+    .video-header {
+        height: 330px;      /* Larger hero video */
+    }
+
+    .video-header h1 {
+        font-size: 3rem;
+    }
+
+    .project-list {
+        gap: 1.5rem;
+    }
+
+    .about-img {
+        width: 60%;
+    }
+}
+
+/* ----------- ULTRA-WIDE MONITORS (min-width: 1800px) ----------- */
+@media (min-width: 1800px) {
+
+    body {
+        font-size: 1.1rem; 
+    }
+
+    .video-header {
+        height: 380px;
+    }
+
+    section {
+        max-width: 1250px;
+        padding: 2rem;
+    }
+
+    .project-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
