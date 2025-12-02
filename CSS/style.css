@@ -1,0 +1,217 @@
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+body, header, section, nav, footer {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+    text-shadow: 0 0 8px rgb(45, 75, 140);
+}
+
+
+/* Body styling */
+body {
+    background: rgb(5, 10, 25); /* your darkest space blue */
+    color: rgb(200, 220, 255); /* subtle light text for readability */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    /*background: rgb(15, 35, 70); /* middle space blue */*/
+    color: rgb(220, 230, 255); /* light text */
+    border-bottom: 4px solid rgb(45, 75, 140); /* lightest accent */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Navigation */
+nav {
+    background: rgb(15, 35, 70); /* middle space blue */
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(200, 220, 255);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(45, 75, 140); /* light accent */
+}
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgb(15, 35, 70); /* middle space blue */
+    color: rgb(200, 220, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: rgb(220, 230, 255); /* light text */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f8d7da;
+    padding-bottom: 0.5rem;
+    text-shadow: 0 0 8px rgb(45, 75, 140);
+}
+
+
+/* About Section Layout */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.about-img {
+    width: 70%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+
+/* Projects */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project {
+    background: rgb(5, 10, 25); /* darkest blue */
+    color: rgb(200, 220, 255);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: rgb(45, 75, 140);
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: rgb(70, 100, 180);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgb(15, 35, 70); /* middle blue */
+    color: rgb(220, 230, 255);
+    margin-top: 2rem;
+}
+
+
+/* Header with Video Background */
+.video-header {
+    position: relative;
+    width: 100%;
+    height: 260px;                 /* Adjust height as you like */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: rgb(220, 230, 255);
+    border-bottom: 4px solid rgb(45, 75, 140);
+}
+
+/* Actual video */
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;             /* Stretches video perfectly */
+    z-index: -2;
+}
+
+/* Dark overlay for readability */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 10, 25, 0.6);  /* Your space theme, semi-transparent */
+    z-index: -1;
+}
+
+/* Text styling stays the same, but ensure it’s visible */
+.video-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.video-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+}
